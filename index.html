@@ -1,97 +1,124 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Exploits Report</title>
+    <title>Cybersecurity Practice</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        h2 {
-            color: #333;
-        }
+        /* Optional styling */
         pre {
             background-color: #f4f4f4;
             padding: 10px;
             border-radius: 5px;
-            overflow-x: auto;
+        }
+        code {
+            display: block;
+            white-space: pre-wrap;
+            font-family: monospace;
         }
     </style>
 </head>
 <body>
-    <h1>Exploits Report</h1>
+    <h1>Cybersecurity Practice Instructions</h1>
 
-    <h2>Prac 2 Recon-ng</h2>
+    <h2>Practice 2: Recon-ng</h2>
     <pre>
-        <!-- Output from Recon-ng tasks -->
-        marketplace install all
-        workspaces create carlover
-        workspaces list
-        db insert domains - tesla.com
-        show domains
-        modules load recon/domains-hosts/hackertarget
-        info
-        options set SOURCE tesla.com
-        run
-        show hosts
-        modules load reporting/html
-        options set CREATOR (Your Name)
-        options set CUSTOMER (Any Name)
-        options set /home/kali/carinfo.html
-        run
+<code># Prac 2 recong
+sudo su
+recon-ng
+help
+marketplace install all
+workspaces help
+workspaces create carlover
+workspaces list
+help db
+db schema
+db help
+db insert domains - (insert your URL and text in below prompt - tesla.com and for exams)
+show domains
+modules help
+modules search hack
+modules load recon/domains-hosts/hackertarget
+info
+options help
+option set SOURCE tesla.com
+run
+show hosts
+modules search report
+modules load reporting/html
+options help
+options set CREATOR  (YOUR NAME)
+options set CUSTOMER  (ANY NAME)
+options set /home/kali/carinfo.html
+
+</code>
+    </pre>
+    <p>In a new terminal:</p>
+    <pre>
+<code>sudo su
+touch carinfo.html
+ls
+pwd
+</code>
     </pre>
 
-    <h2>Prac 3 enumerating host, port, and service scanning</h2>
+    <h2>Practice 3: Nmap</h2>
     <pre>
-        <!-- Output from Nmap tasks -->
-        nmap scanme.org -v
-        nmap -v -T4 scanme.org
-        sudo nmap -v -sT scanme.org
-        sudo nmap -v -O scanme.org
-        nmap -v --traceroute scanme.nmap.org
+<code>#prac 3 nmap
+nmap scanme.org -v
+nmap -v -T4 scanme.org
+sudo nmap -v -sT scanme.org
+sudo nmap -v -O scanme.org
+sudo nmap -v -T4 -O scanme.nmap.org
+nmap -v -p 1-1024 scanme.nmap.org
+nmap -v --traceroute scanme.nmap.org
+</code>
     </pre>
 
-    <h2>Prac 4 ZAP</h2>
+    <h2>Practice 4: ZAP</h2>
     <pre>
-        <!-- Output from ZAP tasks -->
-        sudo apt update
-        sudo apt install zaproxy
+<code>#prac 4 zap
+sudo apt update
+sudo apt install zaproxy
+</code>
     </pre>
 
-    <h2>Prac 5 SET</h2>
+    <h2>Practice 5: SETk</h2>
     <pre>
-        <!-- Output from SET tasks -->
-        112 13 222
-        in new terminal
-        sudo su, cd cd.set ls 
+<code>#prac 5 SETk
+112 13 222
+in new terminal -
+cd cd.set ls sudo
+</code>
     </pre>
 
-    <h2>Prac 6 exploit webased apps</h2>
+    <h2>Practice 6: Nmap on Spotify</h2>
     <pre>
-        <!-- Output from Nmap tasks -->
-        sudo nmap -v open.spotify.com
-        sudo nmap -v open.spotify.com -O
-        sudo nmap -v open.spotify.com -O -sA
-        sudo nmap -v open.spotify.com -O -sA --script=vulners
+<code>#prac 6
+sudo nmap -v open.spotify.com
+sudo nmap -v open.spotify.com -O
+sudo nmap -v open.spotify.com -O -sA
+sudo nmap -v open.spotify.com -O -sA --script=vulners
+</code>
     </pre>
 
-    <h2>Prac 7 Metasploit</h2>
+    <h2>Practice 7: Metasploit</h2>
     <pre>
-        <!-- Output from Metasploit tasks -->
-        msfconsole
-        search exploits
-        use exploit/multi/handler
-        set payload windows/x64/meterpreter/reverse_tcp
-        show options
-        set LHOST 192.168.1.123
-        run
+<code>#prac 7
+msfconsole
+search exploits
+use exploit/multi/handler
+set payload windows/x64/meterpreter/reverse_tcp
+show options
+set LHOST 192.168.1.123
+run
+</code>
     </pre>
 
-    <h2>Prac 8 Crunch</h2>
+    <h2>Practice 8: Crunch</h2>
     <pre>
-        <!-- Output from Crunch tasks -->
-        crunch 1 2 12345678 > wordlist.txt
-        crunch 10 10 -t abcd^%%%%
+<code>#prac 8
+crunch 1 2 12345678 > wordlist.txt
+crunch 10 10 -t abcd^%%%%
+</code>
     </pre>
-
 </body>
 </html>
